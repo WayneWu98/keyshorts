@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      outline: none;
+    }
+    .parent {
+      height: 60vh;
+      background-color: beige;
+    }
+    .child {
+      height: 40vh;
+      background-color: lightsteelblue;
+    }
+    .subchild {
+      height: 20vh;
+      background-color: cadetblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    parent
+    <div class="child">
+      child
+      <div class="subchild">subchild</div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/demo.ts"></script>
+</body>
+</html>
