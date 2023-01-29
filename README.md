@@ -1,6 +1,6 @@
 # keyshorts
 
-**keyshorts** help you add keyboard shortcuts to your website quickly and easily!!!
+**keyshorts** helps you add keyboard shortcuts to your website quickly and easily!!!
 
 ## Quick Start
 

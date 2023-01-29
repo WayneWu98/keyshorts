@@ -2,6 +2,15 @@
   "name": "keyshorts",
   "version": "0.0.2",
   "type": "module",
+  "homepage": "https://github.com/WayneWu98/keyshorts",
+  "description": "keyshorts helps you add keyboard shortcuts to your website quickly and easily!!!",
+  "keywords": ["keyboard", "shortcuts"],"repository": {
+    "type": "git",
+    "url": "https://github.com/WayneWu98/keyshorts.git"
+  },
+  "author": "Wayne Wu <wayne-wu@outlook.com> (https://wayne-wu.com/)",
+  "license": "MIT",
+  "types": "./dist/main.d.ts",
   "files": [
     "dist"
   ],
@@ -15,8 +24,7 @@
   },
   "scripts": {
     "dev": "vite .",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
