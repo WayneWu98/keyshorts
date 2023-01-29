@@ -1,3 +1,22 @@
+type ShortCuts = string[]
+
+interface Config {
+  handler: Function,
+  disabled?: () => boolean,
+  caseSensitive?: boolean,
+  repeat?: boolean,
+}
+
+declare global {
+  interface HTMLElement {
+    registerKeyshort: typeof registerKeyshort,
+  }
+
+  interface KeyboardEvent {
+    __KEYSHORT_HIT?: boolean
+  }
+}
+
 const DEFAULT_CONFIG: Omit<Config, 'handler'> = {
   disabled: () => false,
   caseSensitive: false,
@@ -39,8 +58,10 @@ function register(el: HTMLElement, shortcuts: ShortCuts, config: any) {
   }
 }
 
-HTMLElement.prototype.registerKeyshort = function(shortcuts, config) {
+function registerKeyshort(this: HTMLElement, shortcuts: ShortCuts, config: Config | Function) {
   return register(this, shortcuts, config as any)
 }
+
+HTMLElement.prototype.registerKeyshort = registerKeyshort
 
 export { register }
