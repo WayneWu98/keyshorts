@@ -1,6 +1,7 @@
 const DEFAULT_CONFIG: Omit<Config, 'handler'> = {
   disabled: () => false,
   caseSensitive: false,
+  repeat: false,
 }
 
 function register(el: HTMLElement, shortcuts: ShortCuts, config: Config): Function
