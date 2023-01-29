@@ -15,16 +15,16 @@ Require `keyshorts` and register your first keyshort.
 
 ```javascript
 import 'keyshorts'
-// register shortcut
+// register shortcuts
 const unregister = document.querySelector('.div').registerKeyshort(['Shift', 'f'], () => { dosomething() })
-// unregister shortcut
+// unregister shortcuts
 unregister()
 
 // or
 import { register } from 'keyshorts'
-// register shortcut
+// register shortcuts
 const unregister = register(document.querySelector('.div'), ['Shift', 'f'], () => { dosomething() })
-// unregister shortcut
+// unregister shortcuts
 unregister()
 ```
 
@@ -33,15 +33,15 @@ unregister()
 Load dependence.
 
 ```html
-<script src="https://url/to/keyshorts.umd.jd"></script>
+<script src="https://url/to/keyshorts.umd.js"></script>
 ```
 
 And then register your first keyshort.
 
 ```javascript
-// register shortcut
+// register shortcuts
 const unregister = document.querySelector('.div').registerKeyshort(['Shift', 'f'], () => { dosomething() })
-// unregister shortcut
+// unregister shortcuts
 unregister()
 ```
 
@@ -49,11 +49,11 @@ unregister()
 
 ### register(el: HTMLElement, shortcuts: string[], opt: Function | Opt): Function
 
-register a shortcut to a html element.
+register a shortcuts to a html element.
 
 #### el: HTMLElement
 
-Html element that you want register shortcut to.
+Html element that you want register shortcuts to.
 
 #### shortcuts: string[]
 
@@ -61,14 +61,14 @@ An array composed of keys (key of keyboard words), you can get all keys at [MDN]
 
 #### opt: Function | Opt
 
-It can be a single function to handle the event that shortcut was hit.
+It can be a single function to handle the event that shortcuts was hit.
 
 Or it can be a Object to fully configure behaviors. It is composed these prop blow.
 
-- handler: Function - handle keyboard shortcut
+- handler: Function - handle keyboard shortcuts
 - disabled?: () => boolean - decide whether should call handler or not, default is `() => false`
 - caseSensitive?: boolean - make letter key case sensitive, default is `false`
-- repeat?: boolean - decide whether should handle shortcut event in repeating, default is `false`. (more info about repeat at [MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/repeat))
+- repeat?: boolean - decide whether should handle shortcuts event in repeating, default is `false`. (more info about repeat at [MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/repeat))
 
 #### returns
 
@@ -76,7 +76,7 @@ Returns is a method to unregister shortcut.
 
 ### HTMLElement.prototype.registerKeyshort(shortcuts: string[], opt: Function | Opt): Function
 
-To register shortcut in an elegant way, we add a method to the prototype of HTMLElement, you can call it directory in HTMLElement instance like: `document.querySelector('.div').registerKeyshort(...)`.
+To register shortcuts in an elegant way, we add a method to the prototype of HTMLElement, you can call it directory in HTMLElement instance like: `document.querySelector('.div').registerKeyshort(...)`.
 
 Params and returns can refer to `register` method.
 
@@ -84,7 +84,7 @@ Params and returns can refer to `register` method.
 
 ### What will happen if same shortcuts are hit at the same time?
 
-Only shortcuts will hit in the element that shortcuts registered at is focusing. When one shortcut was hit, other same shortcuts will be ignored. You can ignore one shortcut by manual to make hitting event propagate to other shortcut handlers.
+Only shortcuts will hit in the element that shortcuts registered at is focusing. When one shortcuts was hit, other same shortcuts will be ignored. You can ignore one shortcuts by manual to make hitting event propagate to other shortcuts handlers.
 
 ### How to register global shortcuts?
 
