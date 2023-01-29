@@ -85,3 +85,11 @@ Params and returns can refer to `register` method.
 ### What will happen if same shortcuts are hit at the same time?
 
 Only shortcuts will hit in the element that shortcuts registered at is focusing. When one shortcut was hit, other same shortcuts will be ignored. You can ignore one shortcut by manual to make hitting event propagate to other shortcut handlers.
+
+### How to register global shortcuts?
+
+Register shortcuts to `document.body`.
+
+### Why it does not works sometime?
+
+Make sure the element is focusing, you can call `focus()` method in manual, and make it uneffective by calling `blur()`.
